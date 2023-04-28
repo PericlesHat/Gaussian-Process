@@ -44,4 +44,4 @@ The purpose of the Gaussian Process kernel function is to measure the similarity
 
 To implement a Gaussian Process (GP) model, we first set up our kernel function, let's say the Radial Basis Function (RBF) kernel. We then collect training data and compute the kernel (covariance) matrix for the data points. The matrix will have dimensions `n x n`, where `n` is the number of training data points. Each element $K_{ij}$ in the matrix represents the kernel function evaluated between data points $i$ and $j$. To account for noise in the observations, we add a small value (e.g., 1e-6) multiplied by the identity matrix to the kernel matrix. Then we can calculate the inverse and Cholesky decomposition. Finally, we make the prediction for new points and calculate the uncertainty.
 
-The code `gp_torch` I present here is a more modern approach, simply using powerful PyTorch & GPyTorch. You can also check the detailed calculation in `gp_calculate.py`.
+The code `gp_torch.py` I present here is a more modern approach, simply using powerful PyTorch & GPyTorch. You can also check the detailed calculation in `gp_calculate.py`.
